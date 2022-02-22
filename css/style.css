@@ -366,6 +366,7 @@ i{
     }
     .products__discription--box {
         padding-block: 2rem;
+        padding-inline: 1rem;
     }
 
 }
