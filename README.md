@@ -25,7 +25,7 @@ A solution to room home page challenge .
 ## screen shot
 [(Back to top)](#table-of-contents)
 
-![Screenshot](images/Frontend Mentor _ Room homepage.png)
+![Screenshot](images/Frontend%20%Mentor%20%_%20%Room%20%homepage.png)
 
 ## Links
 [(Back to top)](#table-of-contents)
