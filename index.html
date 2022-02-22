@@ -27,128 +27,129 @@
 </head>
 
 <body>
-  <nav class="nav flex">
+  <div class="layer"></div>
+  <div class="nav__links--mob">
+    <ul class="flex fs-3">
+      <li class="nav__links--items">Home</li>
+      <li class="nav__links--items">Shop</li>
+      <li class="nav__links--items">About</li>
+      <li class="nav__links--items">Contact</li>
+    </ul>
+  </div>
+  <div>
+    <button class="nav__btn-toggle">
+      <img id="btn-img" src="./images/icon-hamburger.svg" alt="" />
+    </button>
+  </div>
+
+  <nav class="nav flex w-100">
     <div class="nav__logo">
       <img src="./images/logo.svg" alt="logo" />
     </div>
     <div class="nav__links">
-      <ul class="flex fs-3 text-light">
+      <ul class="flex fs-3">
         <li class="nav__links--items">Home</li>
         <li class="nav__links--items">Shop</li>
         <li class="nav__links--items">About</li>
         <li class="nav__links--items">Contact</li>
       </ul>
     </div>
-    <div>
-      <button class="nav__btn-toggle">
-        <img src="./images/icon-hamburger.svg" alt="" />
-      </button>
-    </div>
   </nav>
   <main>
     <section class="products">
-      <div class="products__images">
-        <div class="dsk-v">
-
-        
-          <div class="carousel carousel--dsk flex">
-            <img src="./images/desktop-image-hero-1.jpg" class="product-img" alt="hero-1" id="hero-1-dsk"/>
-            <img src="./images/desktop-image-hero-2.jpg" class="product-img" alt="hero-2" id="hero-2-dsk"/>
-            <img src="./images/desktop-image-hero-3.jpg" class="product-img" alt="hero-3" id="hero-3-dsk"/>
-          </div>
-
-          <div class="products__navigators products__navigators--dsk flex">
-            <div class="product__navigator product__navigator--prev grid-centered" id="prev">
-              <img src="./images/icon-angle-left.svg" alt="previous" />
+      <!-- carousel -->
+      <div class="row">
+        <div class="col-12 col-md-7">
+          <div id="carousel" class="carousel slide" data-interval="false">
+            <div class="carousel-inner">
+              <picture class="carousel-item active">
+                <source media="(min-width: 700px)" srcset="images/desktop-image-hero-1.jpg">
+                <img src="images/mobile-image-hero-1.jpg" class="d-block w-100" alt="hero-1">
+              </picture>
+              <picture class="carousel-item">
+                <source media="(min-width: 700px)" srcset="images/desktop-image-hero-2.jpg">
+                <img src="images/mobile-image-hero-2.jpg" class="d-block w-100" alt="hero-2">
+              </picture>
+              <picture class="carousel-item">
+                <source media="(min-width: 700px)" srcset="images/desktop-image-hero-3.jpg">
+                <img src="images/mobile-image-hero-3.jpg" class="d-block w-100" alt="hero-3">
+              </picture>
             </div>
-            <div class="product__navigator product__navigator--next grid-centered" id="next">
-              <img src="./images/icon-angle-right.svg" alt="previous" />
+            <div class="products__navigators flex">
+            <button class="product__navigator grid-centered" type="button" data-bs-target="#carousel" data-bs-slide="prev" id="prev">
+              <span aria-hidden="true"> <img src="./images/icon-angle-left.svg" alt="prev"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="product__navigator grid-centered" type="button" data-bs-target="#carousel" data-bs-slide="next" id="next">
+              <span  aria-hidden="true"><img src="./images/icon-angle-right.svg" alt="prev"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div> 
+          </div>
+        </div>
+        <div class="col-12 col-md-5">
+          <div class="products__discription flex align-content-center">
+            <!-- hero - 1 -->
+            <div class="products__discription--box" data-slide="hero-1">
+              <h1 class="products__discription--heading fs-1 txt-dark bolder">
+                Discover innovative ways to decorate
+              </h1>
+              <p class="products__discription--paragraph fs-3 txt-muted">
+                We provide unmatched quality, comfort, and style for property
+                owners across the country. Our experts combine form and function
+                in bringing your vision to life. Create a room in your own style
+                with our collection and make your property a reflection of you and
+                what you love.
+              </p>
+              <a href="#" class="products__discription--btn fs-3 txt-black bold">Shop now
+                <i><img src="./images/icon-arrow.svg" class="icon--muted" alt="" /></i></a>
+            </div>
+            <!-- hero - 2 -->
+            <div class="products__discription--box hide" data-slide="hero-2">
+              <h1 class="products__discription--heading fs-1 txt-dark bolder">
+                We are available all across the globe
+              </h1>
+              <p class="products__discription--paragraph fs-3 txt-muted">
+                With stores all over the world, it's easy for you to find
+                furniture for your home or place of business. Locally, we’re in
+                most major cities throughout the country. Find the branch nearest
+                you using our store locator. Any questions? Don't hesitate to
+                contact us today.
+              </p>
+              <a href="#" class="products__discription--btn fs-3 txt-black bold">Shop now
+                <i><img src="./images/icon-arrow.svg" class="icon--muted" alt="shopnow" /></i></a>
+            </div>
+            <!-- hero - 3 -->
+            <div class="products__discription--box hide" data-slide="hero-3">
+              <h1 class="products__discription--heading fs-1 txt-dark bolder">
+                Manufactured with the best material
+              </h1>
+              <p class="products__discription--paragraph fs-3 txt-muted">
+                Our modern furniture store provide a high level of quality. Our
+                company has invested in advanced technology to ensure that every
+                product is made as perfect and as consistent as possible. With
+                three decades of experience in this industry, we understand what
+                customers want for their home and office.
+              </p>
+              <a href="#" class="products__discription--btn fs-3 txt-black bold">Shop now
+                <i><img src="./images/icon-arrow.svg" class="icon--muted" alt="" /></i></a>
             </div>
           </div>
-    </div>
-        <!-- mobile -->
+        </div>
         
-      <div class="mob-v">
-
-        
-        <div class="carousel carousel--mob flex  ">
-          <img src="./images/mobile-image-hero-1.jpg" class="product-img--mob" alt="hero-1" id="hero-1-mob" />
-          <img src="./images/mobile-image-hero-2.jpg" class="product-img--mob" alt="hero-2" id="hero-2-mob"/>
-          <img src="./images/mobile-image-hero-3.jpg" class="product-img--mob" alt="hero-3" id="hero-3-mob"/>
-        </div>
-
-        <div class="products__navigators products__navigators--mob  flex">
-          <div class="product__navigator product__navigator--prev grid-centered" id="prevmob">
-            <img src="./images/icon-angle-left.svg" alt="previous" />
-          </div>
-          <div class="product__navigator product__navigator--next grid-centered" id="nextmob">
-            <img src="./images/icon-angle-right.svg" alt="previous" />
-          </div>
-        </div>
       </div>
-
-
-
-
-      </div>
-
-      <div class="products__discription flex">
-        <!-- hero - 1 -->
-        <div class="products__discription--box" data-slide="hero-1">
-          <h1 class="products__discription--heading fs-1 text-dark bold">
-            Discover innovative ways to decorate
-          </h1>
-          <p class="products__discription--paragraph fs-3 text-muted">
-            We provide unmatched quality, comfort, and style for property
-            owners across the country. Our experts combine form and function
-            in bringing your vision to life. Create a room in your own style
-            with our collection and make your property a reflection of you and
-            what you love.
-          </p>
-          <a href="#" class="products__discription--btn text-muted">Shop now
-            <i><img src="./images/icon-arrow.svg" class="icon--muted" alt="" /></i></a>
-        </div>
-        <!-- hero - 2 -->
-        <div class="products__discription--box hide" data-slide="hero-2">
-          <h1 class="products__discription--heading fs-1 text-dark bold">
-            We are available all across the globe
-          </h1>
-          <p class="products__discription--paragraph fs-3 text-muted">
-            With stores all over the world, it's easy for you to find
-            furniture for your home or place of business. Locally, we’re in
-            most major cities throughout the country. Find the branch nearest
-            you using our store locator. Any questions? Don't hesitate to
-            contact us today.
-          </p>
-          <a href="#" class="products__discription--btn text-muted">Shop now
-            <i><img src="./images/icon-arrow.svg" class="icon--muted" alt="shopnow" /></i></a>
-        </div>
-        <!-- hero - 3 -->
-        <div class="products__discription--box hide" data-slide="hero-3">
-          <h1 class="products__discription--heading fs-1 text-dark bold">
-            Manufactured with the best material
-          </h1>
-          <p class="products__discription--paragraph fs-3 text-muted">
-            Our modern furniture store provide a high level of quality. Our
-            company has invested in advanced technology to ensure that every
-            product is made as perfect and as consistent as possible. With
-            three decades of experience in this industry, we understand what
-            customers want for their home and office.
-          </p>
-          <a href="#" class="products__discription--btn text-muted">Shop now
-            <i><img src="./images/icon-arrow.svg" class="icon--muted" alt="" /></i></a>
-        </div>
-      </div>
+      
     </section>
-    <section class="about flex">
-      <div>
-        <img src="./images/image-about-dark.jpg" alt="" />
-      </div>
+    <section>
+      <div class="about d-md-flex ">
+        <div>
+          <img class="img-fluid w-100" src="./images/image-about-dark.jpg" alt="" />
+        </div>
       <div class="about__text">
-        <h2 class="about__text--heading text-dark fs-2 bolder text-uppercase">
+        <h2 class="about__text--heading txt-dark fs-2 bolder text-uppercase">
           About our furniture
         </h2>
-        <p class="fs-3 text-muted">
+        <p class="fs-3 txt-muted">
           Our multifunctional collection blends design and function to suit
           your individual taste. Make each room unique, or pick a cohesive
           theme that best express your interests and what inspires you. Find
@@ -158,8 +159,10 @@
         </p>
       </div>
       <div>
-        <img src="./images/image-about-light.jpg" alt="" />
+        <img class="img-fluid w-100" src="./images/image-about-light.jpg" alt="" />
       </div>
+    </div>
+      
     </section>
   </main>
 
