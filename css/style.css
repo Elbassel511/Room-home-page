@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@500;600;700&display=swap');
+:root{
+    /* colors */
+    --clr-dark-gray: hsl(0, 0%, 63%);
+    --clr-black: hsl(0, 0%, 0%);
+    --clr-white: hsl(0, 0%, 100%);
+    --clr-very-dark-gray: hsl(0, 0%, 27%);
+    /* font sizes */
+    --fs-1: 2.6rem ; /*3.7rem*/
+    --fs-2: 1.4rem ;
+    --fs-3: 1.15rem ;
+
+}
+@media (min-width :40rem) {
+   :root {
+       --fs-1 :3.7rem 
+   }
+}
+
+/* --------------- */
+/* ------Reset ----*/
+/* --------------- */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+    font-family: 'Spartan', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    font-family: inherit;
+    color: inherit;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure {
+  margin: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-weight: normal;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select,
+a {
+  font: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ------------------- */
+/* Utility classes     */
+/* ------------------- */
+.flex {
+    display: flex;
+}
+.flex-col{
+    flex-direction: column;
+}
+.grid-centered{
+    display: grid;
+    place-items: center;
+}
+.hide {
+    display: none;
+}
+
+
+/* typography */
+.text-light{
+    color: var(--clr-white);
+}
+
+.text-dark{
+    color: var(--clr-black);
+}
+
+.text-muted {
+    color: var(--clr-dark-gray);
+}
+
+/* font-sizes */
+.fs-1 {
+    font-size: var(--fs-1);
+}
+
+.fs-2 {
+    font-size: var(--fs-2);
+}
+
+.fs-3 {
+    font-size: var(--fs-3);
+}
+
+.regular{
+    font-weight: 500;
+}
+.bold{
+    font-weight: 600;
+}
+.bolder{
+    font-weight: 700;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+
+
+
+/* ------------------- */
+/* Compontents         */
+/* ------------------- */
+.nav{
+    background-color: transparent;
+    position: absolute;
+    top:5rem;
+    left:5rem;
+    gap: 5.5rem;
+    z-index: 100;
+}
+
+.nav__logo{
+    display: grid;
+    place-items: center;
+}
+
+.nav__links{
+    text-align: start;
+}
+
+.nav__links ul{
+    gap: 3.4rem;
+    padding-inline-start: 0;
+}
+
+.nav__links--items{
+    cursor: pointer;
+    position: relative;
+}
+.nav__links--items::after{
+    content: "";
+    height: 2px;
+    position: absolute;
+    width: 100%;
+    background-color: var(--clr-white);
+    left: 0;
+    bottom: -6px;
+    transform: scale(0);
+    transition: all .4s;
+}
+
+.nav__links--items:hover::after{
+    transform: scale(100%);
+}
+
+.nav__btn-toggle{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    position: absolute;
+    top: 4.4rem;
+    left: 2.4rem;
+}
+/* --------------------------------------------------------------- */
+
+.products {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 1.4fr 1fr;
+}
+
+@media (max-width : 40rem) {
+    .products {
+        grid-template-columns: 1fr;
+        grid-auto-flow: row;
+    }
+
+}
+
+
+.products__images {
+position: relative;
+
+}
+.carousel {
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+  
+
+.products__discription{
+    margin: auto;
+    max-width: 40rem;
+    
+}
+.products__discription--box{
+  width: 40rem;
+}
+
+
+.products__discription--heading {
+    line-height: 1.2;
+    padding-bottom: 2.1rem;
+}
+
+.products__discription--btn{
+    display: inline-block;
+    padding-top: 3rem;
+    text-transform: uppercase;
+    letter-spacing: .9rem;
+}
+
+i{
+    display: inline-block;
+}
+.icon--muted{
+    filter: invert(74%) sepia(4%) saturate(4%) hue-rotate(336deg) brightness(89%) contrast(80%);
+}
+
+.product__navigator {
+    width: 8.6rem;
+    aspect-ratio: 1;
+    background-color: var(--clr-black);
+    cursor: pointer;
+}
+.product__navigator:hover {
+    background-color: var(--clr-very-dark-gray);
+
+}
+
+
+.products__navigators {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: translateX(100%);  
+}
+.about__text{
+    padding: 5rem;
+    max-width: 58rem;
+}
+
+.about__text--heading {
+    letter-spacing: 0.25em;
+    padding-bottom: 1rem;
+}
+
+.mob-v{
+    display: none;
+}
+
+@media (max-width:30rem) {
+    .mob-v{
+        display: block;
+    }
+    .dsk-v{
+        display: none;
+    }
+    
+}
